@@ -1,0 +1,53 @@
+<!--
+@license
+Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../core-ajax/core-ajax.html">
+
+<!--
+A data source element for Yahoo YQL.
+
+##### Example
+
+    <yql-data query="SELECT * FROM yahoo.finance.quote WHERE symbol = 'GOOG'"></yql-data>
+
+@element yql-data
+@blurb A data source element for Yahoo YQL.
+@homepage https://polymerlabs.github.io/yql-data/
+-->
+<polymer-element name="yql-data" attributes="query response">
+  <template>
+    <core-ajax
+      auto
+      url="https://query.yahooapis.com/v1/public/yql"
+      params='{"q":"{{query}}", "format":"json", "env":"store://datatables.org/alltableswithkeys"}'
+      handleAs="json"
+      response="{{response}}"></core-ajax>
+  </template>
+
+  <script>
+    Polymer({
+      /**
+       * The YQL query
+       *
+       * @attribute query
+       * @type string
+       */
+      query: null,
+
+      /**
+       * The response object
+       *
+       * @attribute response
+       * @type Object
+       */
+      response: null
+    });
+  </script>
+</polymer-element>

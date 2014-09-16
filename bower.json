@@ -1,0 +1,7 @@
+{
+  "name": "yql-data#gh-pages",
+  "private": true,
+  "dependencies": {
+    "yql-data": "polymerlabs/yql-data#master"
+  }
+}

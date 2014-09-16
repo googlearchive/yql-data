@@ -1,0 +1,19 @@
+{
+  "name": "yql-data",
+  "version": "0.1.0",
+  "authors": [
+    "Keanu Lee <keanulee@google.com>"
+  ],
+  "description": "A data source element for Yahoo YQL.",
+  "keywords": [
+    "polymer",
+    "web-components",
+    "yql"
+  ],
+  "main": "yql-data.html",
+  "homepage": "https://polymerlabs.github.io/yql-data/",
+  "dependencies": {
+    "polymer": "Polymer/polymer#>=0.4.0 <1.0.0",
+    "core-ajax": "Polymer/core-ajax#>=0.4.0 <1.0.0"
+  }
+}
